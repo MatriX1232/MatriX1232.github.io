@@ -1,0 +1,217 @@
+:root{
+    --projektyMinWid:250px;
+    --projektyMaxWid:600px;
+
+    --projektyMinHei:300px;
+    --projektyMaxHei:500px;
+
+    --black: black;
+    --blue: #150050;
+    --violet: #3F0071;
+    --pink: #FB2576;
+    --grey: #50514F;
+    --light_violet: #b4adea;
+}
+
+body{
+    background-color: var(--grey);
+    margin: 0px;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+    padding-top: 100px;
+  }
+
+
+#AboutMe{
+    color: var(--light_violet);
+    font-size: 100px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+p{
+    color: #FDFFF7;
+    font-size: 50px;
+}
+
+.mojeProjekty{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projekt{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    text-align: center;
+
+    background: #c0c0c0;
+
+    height: 500px;
+    width: 200px;
+
+    margin: 20px;
+    padding: 20px;
+
+    border-radius: 20px;
+
+    font-size: 20px;
+
+    transition: ease-out 0.5s;
+}
+
+.projekt:hover{
+    background-color: #e2dfd2;
+}
+
+.projektButton{
+    position: relative;
+    display: grid;
+    grid-template-areas: "name name image image image"
+               "desc desc desc desc desc";
+    gap: 20px;
+
+    background: var(--violet);
+    color: whitesmoke;
+    
+    min-width: var(--projektyMinWid);
+    max-width: var(--projektyMaxWid);
+    min-height: var(--projektyMinHei);
+    max-height: var(--projektyMaxHei);
+
+    margin: 20px;
+    padding: 20px;
+
+    border-radius: 20px;
+    font-size: 20px;
+    text-overflow: clip;
+
+    border-width: 3px;
+    box-shadow: 10px 10px var(--black);
+
+    transition: ease-out 0.3s;
+
+}
+
+.projektButton:hover{
+    background-color: var(--pink);
+}
+
+.projektButton img{
+    aspect-ratio: 16/9;
+    max-width: calc(var(--projektyMaxWid)/1.5);
+    border-radius: 20px;
+}
+
+.projektButton:active{
+    box-shadow: 0px 0px transparent;
+}
+
+.item1 {grid-area: name;}
+.item2 {grid-area: image;}
+.item3 {grid-area: desc;}
+
+
+.waves_up {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.waves_up svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 169px;
+    transform: rotateY(180deg);
+}
+
+.waves_down {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.waves_down svg {
+    position: relative;
+    display: block;
+    width: calc(162% + 1.3px);
+    height: 180px;
+    transform: rotateY(180deg);
+}
+
+.violet{
+    fill :var(--violet);
+}
+.pink{
+    fill: var(--pink);
+}
+.black{
+    fill: var(--black);
+}
+.blue{
+    fill: var(--blue);
+}
+.light_violet{
+    fill: var(--light_violet);
+}
+.grey{
+    fill: var(--grey);
+}
+
+
+
+
+.schoolList{
+    list-style: none;
+    font-size: 50px;
+}
+
+li{
+    border-left: 12px solid white;
+}
+
+li:before{
+    content: attr(icon);
+    font-size: 100px;
+    left: -48px;
+    top: 15px;
+    position: relative;
+
+    /*
+    background: -webkit-linear-gradient(red, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /*
+    background: white;
+    border: 1px solid #4e5ed3;
+    border-radius: 50%;
+    top: 0px;
+    */
+}
+
+.listIcon{
+    border-radius: 1000px;
+    height: 30px;
+    width: 30px;
+    border: 5px solid var(--pink);
+}
